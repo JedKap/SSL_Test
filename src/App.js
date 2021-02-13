@@ -1,23 +1,14 @@
 import React from "react";
-import "./App.css";
 import Nuts from "./components/Nuts";
 
+import "./App.css";
+
 function App() {
-  const [count, setCount] = React.useState(0);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
   return (
     <>
-      <p>{count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <div className="App">
+        <h1>Nuts Take Home Exercise</h1>
+      </div>
       <Nuts />
     </>
   );

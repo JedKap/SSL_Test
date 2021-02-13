@@ -1,0 +1,40 @@
+.nutsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nutsBox {
+  background-color: rgba (242, 242, 242, 1); /* --color-shading */
+  color: rgba(94, 36, 102, 0.8); /* --color-simmons */
+  font-size: 1.2rem;
+  width: 300px;
+  height: 30vh;
+  border: solid red 2xp;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  cursor: pointer;
+}
+
+.nutsItem {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+}
+
+.nutsItem:hover {
+  background-color: lightsalmon;
+}
+
+.nutsText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 12px;
+  margin-left: 5px;
+  padding-top: 5px;
+}
+
+.nutsImage {
+  width: 40px;
+  height: 100%;
+}

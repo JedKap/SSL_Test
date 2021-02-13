@@ -4,10 +4,11 @@ import path from "path";
 
 import React from "react";
 import ReactDOMServer from "react-dom/server";
+import { StaticRouter } from "react-router-dom";
 
 import App from "../src/App";
 
-const PORT = 3001;
+const PORT = 3006;
 
 const app = express();
 
@@ -17,11 +18,17 @@ app.use("^/$", (req, res, next) => {
       console.log(err);
       return res.status(500).send("Some error happened");
     }
+
+    const context = {};
+    const rt = ReactDOMServer.renderToString(
+      <StaticRouter location={req.url} context={context}>
+        <App />
+      </StaticRouter>
+    );
+
+    console.log("Serving Up");
     return res.send(
-      data.replace(
-        '<div id="root"></div>',
-        `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`
-      )
+      data.replace('<div id="root"></div>', `<div id="root">${rt}</div>`)
     );
   });
 });
@@ -29,5 +36,5 @@ app.use("^/$", (req, res, next) => {
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
 app.listen(PORT, () => {
-  console.log(`App launched on ${PORT}`);
+  console.log(`***** SERVER NUT APP LAUNCHED ON ${PORT} *****`);
 });

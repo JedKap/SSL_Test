@@ -1,0 +1,122 @@
+.nuts-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.nuts-modal-main {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: fixed;
+  background: white;
+  width: 400px;
+  max-height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.nuts-description {
+  font-size: 0.8rem;
+  max-height: 250px;
+  width: 50%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: #bbbbbb solid 1px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.nuts-left-body {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.modal-top {
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 6px;
+  border-bottom: solid black 1px;
+  height: 40px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.modal-footer {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.modalNutImage {
+  width: 130px;
+  height: 130px;
+  padding: 20px;
+}
+
+.badgeImage {
+  width: 30px;
+  height: 30px;
+}
+
+.modalButton {
+  background: #666666;
+  border: darkblue;
+  border-radius: 3px;
+  color: yellow;
+  height: 30px;
+  width: 100px;
+}
+
+.modalButton:hover {
+  background-color: #999999;
+}
+
+.modalPrice {
+  font-size: 0.8rem;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 1px;
+}
+
+.modalBadge {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  /* width: 53px;
+  height: 35px; */
+}

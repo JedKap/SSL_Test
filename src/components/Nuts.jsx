@@ -73,6 +73,7 @@ const Nuts = () => {
   useEffect(() => {
     setScrolling(false);
     getMoreNuts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPos]);
 
   const hideNutsModal = () => setShowModal(false);
