@@ -1,1 +1,1 @@
-# nuts_tht
+# test of server side rendering
